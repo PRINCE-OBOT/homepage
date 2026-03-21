@@ -118,10 +118,10 @@ function MyWork({
         >
           <h3>{myWorkName}</h3>
           <a href={repoLink} target="_blank">
-            <img src={githubImg} alt="Github icon" className="icon" />
+            <img src={githubImg} alt="repo" className="icon" />
           </a>
           <a href={livePreviewLink} target="_blank">
-            <img src={openLinkImg} alt="Open link icon" className="icon" />
+            <img src={openLinkImg} alt="live preview" className="icon" />
           </a>
         </div>
         <div>{desc}</div>
