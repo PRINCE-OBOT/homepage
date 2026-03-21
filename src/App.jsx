@@ -71,7 +71,10 @@ const myWorkData = [
     livePreviewLink: "https://prince-obot.github.io/my_project/",
     desc: "A simple interactive version of Rock Paper Scissors where the user plays against the computer."
   }
-];
+].map((work, index) => {
+  work.key = index;
+  return work;
+});
 
 function MyWork({
   screenshotSrc,
@@ -140,34 +143,46 @@ function App() {
   return (
     <div id="container">
       <div className="profile_section_design"></div>
-      <header className="profile_section">
-        <Picture
-          landscapeImg={manInDarkRoomImg}
-          portraitImg={manInDarkRoomPortraitImg}
-          alt="Man in a dark house"
-          className="profile_img"
-        />
-        <h1 className="profile_name">Prince Obot</h1>
-      </header>
-      <main>
-        <h2 className="about_me">About me</h2>
-        <p className="about_me_desc">
-          Now that you are equipped with the necessary knowledge to make your
-          websites more accessible to many users, the question arises: How can
-          we verify the correct implementation of a11y features? Are there any
-          mistakes to be corrected, or potential improvements to be made? In
-          this lesson, we will answer those questions to help push your a11y
-          skills over the top.
-        </p>
-        <div className="social_handle_section">
-          <a href="https://github.com/PRINCE-OBOT/" target="_blank">
-            <img src={githubImg} alt="Github icon" className="icon" />
-          </a>
-          <a href="https://x.com/obot_princ7790" target="_blank">
-            <img src={xImg} alt="X icon" className="icon" />
-          </a>
-        </div>
 
+      <header>
+        <section className="profile_section">
+          <Picture
+            landscapeImg={manInDarkRoomImg}
+            portraitImg={manInDarkRoomPortraitImg}
+            alt="Man in a dark house"
+            className="profile_img"
+          />
+          <h1 className="profile_name">Prince Obot</h1>
+        </section>
+
+        <section className="about_me_section">
+          <h2 className="about_me">About me</h2>
+          <p className="about_me_desc">
+            Now that you are equipped with the necessary knowledge to make your
+            websites more accessible to many users, the question arises: How can
+            we verify the correct implementation of a11y features? Are there any
+            mistakes to be corrected, or potential improvements to be made? In
+            this lesson, we will answer those questions to help push your a11y
+            skills over the top.
+            Now that you are equipped with the necessary knowledge to make your
+            websites more accessible to many users, the question arises: How can
+            we verify the correct implementation of a11y features? Are there any
+            mistakes to be corrected, or potential improvements to be made? In
+            this lesson, we will answer those questions to help push your a11y
+            skills over the top.
+          </p>
+          <div className="social_handle_section">
+            <a href="https://github.com/PRINCE-OBOT/" target="_blank">
+              <img src={githubImg} alt="Github icon" className="icon" />
+            </a>
+            <a href="https://x.com/obot_princ7790" target="_blank">
+              <img src={xImg} alt="X icon" className="icon" />
+            </a>
+          </div>
+        </section>
+      </header>
+
+      <main>
         <div className="my_work_section">
           <h2 className="my_work_title">My Work</h2>
           <div className="my_work_wrapper">
@@ -178,7 +193,8 @@ function App() {
                 myWorkName,
                 repoLink,
                 livePreviewLink,
-                desc
+                desc,
+                key
               }) => (
                 <MyWork
                   screenshotSrc={screenshotSrc}
@@ -187,6 +203,7 @@ function App() {
                   repoLink={repoLink}
                   livePreviewLink={livePreviewLink}
                   desc={desc}
+                  key={key}
                 />
               )
             )}
@@ -222,7 +239,7 @@ function App() {
         </section>
         <section className="footer_bottom_section">
           <Picture
-            landscapeImg={manInDarkRoomImg}
+            landscapeImg={manInDarkRoomPortraitImg}
             portraitImg={manInDarkRoomPortraitImg}
             alt="Man in a dark house"
             className="footer_img"

@@ -10,7 +10,7 @@
   margin: 0 auto 0;
   padding: var(--sm-sz);
   position: relative;
-  /* width: min(100%, 1600px); */
+  width: min(100%, 1300px);
 }
 
 .profile_section_design {
@@ -21,10 +21,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 
-header {
+.profile_section {
   position: relative;
   margin: 0 auto 0;
-  width: min(100%, 600px);
+  width: min(100%, 500px);
 }
 
 .profile_img,
@@ -33,7 +33,6 @@ header {
   width: 100%;
   height: 400px;
   box-shadow: var(--shadow);
-  border-radius: var(--sm-sz);
 }
 
 .profile_name {
@@ -45,9 +44,10 @@ header {
   font-size: clamp(2rem, 2rem + 0.3vw, 3rem);
 }
 
-main {
+.about_me_section {
   padding-top: var(--sm-sz);
-  width: 100%;
+  text-align: left;
+  background: #fff;
 }
 
 .about_me {
@@ -70,6 +70,10 @@ main {
   .icon {
     width: 30px;
   }
+}
+
+main {
+  width: 100%;
 }
 
 .my_work_section {
@@ -110,7 +114,20 @@ footer {
   flex-direction: column;
   row-gap: var(--sm-sz);
   font-size: 0.9rem;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1%, 20% 0, 20% 1%, 40% 0, 40% 1%, 60% 0, 60% 1%, 80% 0, 80% 1%);
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 1%,
+    20% 0,
+    20% 1%,
+    40% 0,
+    40% 1%,
+    60% 0,
+    60% 1%,
+    80% 0,
+    80% 1%
+  );
 }
 
 .footer_top_section {
@@ -129,5 +146,37 @@ footer {
     background: #fff;
     border-radius: 10px;
     padding: 5px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile_section {
+    float: left;
+    margin: 20px 20px 0 -40px;
+    z-index: 1;
+  }
+
+  .profile_name {
+    inset: 20px -150px auto auto;
+  }
+
+  .about_me_section {
+    transform: translate(0px);
+    margin-top: 100px;
+    padding: 80px var(--sm-lg) var(--sm-lg) var(--sm-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .about_me_desc {
+    text-align: left;
+  }
+
+  .social_handle_section {
+    justify-content: flex-end;
+  }
+
+  footer {
+    flex-direction: row;
+    background: linear-gradient(270deg, black 80%, rgba(108, 66, 113, 0.9));
   }
 }
