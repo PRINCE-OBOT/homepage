@@ -85,46 +85,48 @@ function MyWork({
   desc
 }) {
   return (
-    <div className="my_work">
-      <div
-        style={{
-          height: "55%"
-        }}
-      >
-        <img
-          src={screenshotSrc}
-          alt={screenshotAlt}
-          style={{
-            height: "100%",
-            width: "100%",
-            borderRadius: "20px 20px 0 0",
-            objectFit: "cover"
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "20px"
-        }}
-      >
+    <div className="my_work_box">
+      <div className="my_work">
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 20px 20px",
-            columnGap: "20px"
+            height: "55%"
           }}
         >
-          <h3>{myWorkName}</h3>
-          <a href={repoLink} target="_blank">
-            <img src={githubImg} alt="repo" className="icon" />
-          </a>
-          <a href={livePreviewLink} target="_blank">
-            <img src={openLinkImg} alt="live preview" className="icon" />
-          </a>
+          <img
+            src={screenshotSrc}
+            alt={screenshotAlt}
+            style={{
+              height: "100%",
+              width: "100%",
+              borderRadius: "20px 20px 0 0",
+              objectFit: "cover"
+            }}
+          />
         </div>
-        <div>{desc}</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "20px"
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 20px 20px",
+              columnGap: "20px"
+            }}
+          >
+            <h3>{myWorkName}</h3>
+            <a href={repoLink} target="_blank">
+              <img src={githubImg} alt="repo" className="icon" />
+            </a>
+            <a href={livePreviewLink} target="_blank">
+              <img src={openLinkImg} alt="live preview" className="icon" />
+            </a>
+          </div>
+          <div>{desc}</div>
+        </div>
       </div>
     </div>
   );
@@ -163,13 +165,12 @@ function App() {
             we verify the correct implementation of a11y features? Are there any
             mistakes to be corrected, or potential improvements to be made? In
             this lesson, we will answer those questions to help push your a11y
-            skills over the top.
-            Now that you are equipped with the necessary knowledge to make your
-            websites more accessible to many users, the question arises: How can
-            we verify the correct implementation of a11y features? Are there any
-            mistakes to be corrected, or potential improvements to be made? In
-            this lesson, we will answer those questions to help push your a11y
-            skills over the top.
+            skills over the top. Now that you are equipped with the necessary
+            knowledge to make your websites more accessible to many users, the
+            question arises: How can we verify the correct implementation of
+            a11y features? Are there any mistakes to be corrected, or potential
+            improvements to be made? In this lesson, we will answer those
+            questions to help push your a11y skills over the top.
           </p>
           <div className="social_handle_section">
             <a href="https://github.com/PRINCE-OBOT/" target="_blank">
